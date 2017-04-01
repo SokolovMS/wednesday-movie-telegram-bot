@@ -1,0 +1,1337 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Кинотеатр «Арлекино»</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Кинотеатр Арлекино</title>
+				
+		<link rel="stylesheet" href="/css/style.css">
+		
+
+
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+
+		<!-- owl -->
+		<link rel="stylesheet" href="/vendor/owl2/assets/owl.carousel.css">
+		<!-- <link rel="stylesheet" href="/vendor/owl2/assets/owl.theme.default.min.css"> -->
+		<script src="/vendor/owl2/owl.carousel.js"></script>
+		<script type="text/javascript" src="/js/highslide/highslide-full.packed.js"></script>
+		<script type="text/javascript" src="/js/highslide/highslide.config.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="/js/highslide/highslide.css" />
+
+		
+
+			</head>
+	<body class="ots_schedule" id="ots_schedule">
+		
+			
+
+			<div class="container header__container">
+				<div class="row">
+					<nav class="navbar navbar-default header">
+						
+							<div class="logo">
+								<a class="logo__link" href="/">
+									<img class="logo__img" src="/img/logo.svg" alt="logo">
+								</a>
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12">
+											<ul class="logo__menu">
+												<li class="logo__menu-list">
+													<span class="sub-content sub-content--logo">г. Нижний Новгород</span>
+													<div class="large-text large-text--white">ул. Советская площадь 5</div>
+													<span class="sub-content sub-content--logo"></span>
+													<a class="sub-content sub-content__link-map" href="/contacts/#map">Показать на карте</a>
+												</li>
+												<li class="logo__menu-list">
+													<span class="sub-content sub-content--logo">Автоответчик</span>
+													<div class="large-text large-text--white">(831) 202-98-98</div>
+													<span class="sub-content sub-content--logo">Бронирование</span>
+													<div class="large-text large-text--white">(831) 202-98-98</div>
+												</li>
+												<li class="logo__menu-list logo__menu-list--social">
+													<span class="sub-content sub-content--logo">Мы в соц. сетях</span>
+													<div class="contacts__social">
+														
+														<a class="icon icon-vk" target="_blank" href="https://vk.com/arlekinoteatr"></a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								
+							</div>
+
+							
+							<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="/company/">О нас</a>
+									</li>
+									<li>
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Расписание <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="/films/">Фильмы</a></li>
+											<li><a href="/#schedule_id">Расписание фильмов</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="/children_area/">Детская зона</a>
+									</li>
+									<li>
+										<a href="/gallery/">Галерея</a>
+									</li>
+									<li>
+										<a href="/news/">Акции и новости</a>
+									</li>
+									<li>
+										<a href="/contacts/">Контакты</a>
+									</li>
+								</ul>
+							</div>
+							
+						
+					</nav>
+				</div>
+			</div>
+
+
+
+				
+    
+    <link rel="stylesheet" href="/css/schedule_local.css" type="text/css" />
+    <script type="text/javascript" src="http://89.189.2.130:48080/js/schedule.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $().OTS({
+                serverUrl: 'http://89.189.2.130:48080'
+            });
+            $('.ots_main_cont').OTS('F_OpenShedule',{
+                theatre: 1,
+                day: 1,
+                skin: 1,
+                not_template: 1
+            });
+        });
+    </script>
+    <script>
+        $.fn.OTS.glob_theatre_currency = "руб";  // храним валюту кинотеатра
+        $.fn.OTS.glob_count_point_green = "5"; // макс кол-во выбранных мест при брони.
+        $.fn.OTS.glob_site_tel = ""; // номер телефона для бронирования
+    </script>
+
+
+
+	<section class="banner">
+		<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter36480535 = new Ya.Metrika({ id:36480535, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/36480535" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+		<div class="banner__top"  style="background-image:url(/uploaded/banner_parser/1.jpg)" >
+			<div class="banner__top-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2 col-xs-push-9 col-sm-2 col-sm-push-10">
+							<div class="age-rating age-rating--banner">16+</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-5 col-md-5 banner__rent">
+							<span class="sub-content sub-content--banner">В прокате:</span>с 16   Марта по 20   Апреля
+						</div>
+						<div class="col-xs-12 col-sm-5 col-sm-push-1 banner__genre">
+							<span class="sub-content sub-content--banner">Жанр:</span>
+							<span class="banner__genre-item">мюзикл, фэнтези, мелодрама, семейный                </span>&nbsp;
+							<span class="banner__country">(США)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner__bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="banner__description">
+							<h2 class="banner__title">Красавица и чудовище</h2>
+							<div class="banner__producer"><span class="sub-content sub-content--director">Режиссер:</span>Билл Кондон</div>
+							<div class="banner__short">
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="banner__schedule">
+							<span class="sub-content--baner sub-content--schedule">Сеансы сегодня:</span>
+
+														<a class="banner__showtimes" href="/film/316/#schedule_id">Расписание сеансов</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="film-today">
+    <h2 class="section__title section__title--film-today container">Сегодня в кино:</h2>
+
+    <div class="owl-wrapper">
+        <ul class="owl-carousel ps">
+
+                        <li class="film-card">
+            <a class="film-card__inner" href="/film/327/">
+                <span class="film-card__period">с 30   Марта по 20   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/327.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Лекарство от здоровья </span>
+							<span class="film-card__genre">ужасы, фантастика, фэнтези, триллер, драма, детектив                </span>
+							<span class="film-card__age">(Германия,США) 16+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/329/">
+                <span class="film-card__period">с 30   Марта по 20   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/329.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Призрак в доспехах  <span class="three-d">3D</span></span>
+							<span class="film-card__genre">фантастика, боевик, триллер, драма                </span>
+							<span class="film-card__age">(США) 16+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/330/">
+                <span class="film-card__period">с 30   Марта по 27   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/330.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Призрак в доспехах </span>
+							<span class="film-card__genre">фантастика, боевик, триллер, драма                </span>
+							<span class="film-card__age">(США) 16+</span>
+						</span>
+            </a>
+                            <div class="film-card__schedule">
+                    <span class="sub-content sub-content--film-card">Сеансы сегодня:</span>
+                    <div class="session-list session-list--film-card">
+                        
+                                                                                    <a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+										<div class='cost'>
+																						   												    220 											   												    - 240											   																						руб
+										</div>
+										<div class='hall_name'>1</div>
+										   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='24983' data-mode-type='2' data-count-sector='1'>купить</a></div> 										 " data-html="true"
+                                    >23:00</a>
+
+                            
+                                            </div>
+                </div>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/328/">
+                <span class="film-card__period">с 25   Марта по 20   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/328.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Смурфики: Затерянная деревня </span>
+							<span class="film-card__genre">мультфильм, фэнтези, комедия, приключения, семейный</span>
+							<span class="film-card__age">(США) 6+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/326/">
+                <span class="film-card__period">с 23   Марта по 27   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/326.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Босс-молокосос </span>
+							<span class="film-card__genre">мультфильм, комедия, семейный                </span>
+							<span class="film-card__age">(США) 6+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/324/">
+                <span class="film-card__period">с 23   Марта по 27   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/324.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Живое </span>
+							<span class="film-card__genre">ужасы, фантастика, триллер                </span>
+							<span class="film-card__age">(США) 16+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/320/">
+                <span class="film-card__period">с 23   Марта по 27   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/320.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Босс-молокосос  <span class="three-d">3D</span></span>
+							<span class="film-card__genre">мультфильм, комедия, семейный                </span>
+							<span class="film-card__age">(США) 6+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/318/">
+                <span class="film-card__period">с 16   Марта по 20   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/318.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Сплит </span>
+							<span class="film-card__genre">ужасы, триллер                </span>
+							<span class="film-card__age">(США) 16+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/323/">
+                <span class="film-card__period">с 16   Марта по 30   Марта</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/323.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Везучий случай </span>
+							<span class="film-card__genre">комедия</span>
+							<span class="film-card__age">(Россия) 16+</span>
+						</span>
+            </a>
+                            <div class="film-card__schedule">
+                    <span class="sub-content sub-content--film-card">Сеансы сегодня:</span>
+                    <div class="session-list session-list--film-card">
+                        
+                                                                                    <a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+										<div class='cost'>
+																						   												    120 											   												    - 140											   																						руб
+										</div>
+										<div class='hall_name'>6</div>
+										<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25013' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25013' data-mode-type='2' data-count-sector='1'>купить</a></div> 										 " data-html="true"
+                                    >23:15</a>
+
+                            
+                                            </div>
+                </div>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/317/">
+                <span class="film-card__period">с 16   Марта по 20   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/317.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Красавица и чудовище </span>
+							<span class="film-card__genre">мюзикл, фэнтези, мелодрама, семейный                </span>
+							<span class="film-card__age">(США) 16+</span>
+						</span>
+            </a>
+            
+        </li>
+                <li class="film-card">
+            <a class="film-card__inner" href="/film/314/">
+                <span class="film-card__period">с 09   Марта по 06   Апреля</span>
+                <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/314.jpg" alt="">
+						<span class="film-card__info">
+							<span class="film-card__title">Конг: Остров черепа </span>
+							<span class="film-card__genre">фантастика, фэнтези, боевик, приключения                </span>
+							<span class="film-card__age">(США,Вьетнам) 12+</span>
+						</span>
+            </a>
+            
+        </li>
+    
+            
+        </ul>
+    </div>
+</section>
+
+
+	<section class="schedule" id="schedule_id">
+		<div class="container">
+			<div class="row">
+				<div class="col-sx-12">
+					<h2 class="section__title section__title--schedule container">Расписание сеансов на неделю:</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="schedule-table__container">
+
+
+					<div class="col-md-12">
+						<div class="schedule-table schedule-table--main">
+							
+							<div class="schedule-table__row schedule-table__row--day">
+								<div class="schedule-table__column schedule-table__column--first">Фильмы:</div>
+																	<div class="schedule-table__column">
+										<div class="schedule-table__day">Суббота</div>
+										<div class="schedule-table__date schedule-table__date--orange">01   Апреля </div>
+									</div>
+																	<div class="schedule-table__column">
+										<div class="schedule-table__day">Воскресенье</div>
+										<div class="schedule-table__date ">02   Апреля </div>
+									</div>
+																	<div class="schedule-table__column">
+										<div class="schedule-table__day">Понедельник</div>
+										<div class="schedule-table__date ">03   Апреля </div>
+									</div>
+																	<div class="schedule-table__column">
+										<div class="schedule-table__day">Вторник</div>
+										<div class="schedule-table__date ">04   Апреля </div>
+									</div>
+																	<div class="schedule-table__column">
+										<div class="schedule-table__day">Среда</div>
+										<div class="schedule-table__date ">05   Апреля </div>
+									</div>
+																	<div class="schedule-table__column">
+										<div class="schedule-table__day">Четверг</div>
+										<div class="schedule-table__date ">06   Апреля </div>
+									</div>
+																	<div class="schedule-table__column">
+										<div class="schedule-table__day">Пятница</div>
+										<div class="schedule-table__date ">07   Апреля </div>
+									</div>
+															</div>
+
+							
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Лекарство от здоровья </div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    140 															   																    - 160															   																														руб
+														</div>
+														<div class='hall_name'>1</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25020' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25020' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>11:15</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    220 															   																    - 240															   																														руб
+														</div>
+														<div class='hall_name'>3</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25034' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25034' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>14:15</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    240 															   																    - 260															   																														руб
+														</div>
+														<div class='hall_name'>3</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25035' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25035' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>17:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>3</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25036' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25036' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>19:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>2</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25031' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25031' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>21:15</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    240 															   																    - 260															   																														руб
+														</div>
+														<div class='hall_name'>3</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25037' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25037' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>22:30</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Призрак в доспехах  <span class="three-d">3D</span></div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    220 															   																    - 240															   																														руб
+														</div>
+														<div class='hall_name'>6</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25051' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25051' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>13:15</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    240 															   																    - 260															   																														руб
+														</div>
+														<div class='hall_name'>6</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25052' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25052' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>15:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>6</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25054' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25054' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>20:30</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Призрак в доспехах </div>
+
+																														<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    220 															   																    - 240															   																														руб
+														</div>
+														<div class='hall_name'>1</div>
+														   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='24983' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>23:00</a>
+												
+											</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    140 															   																    - 160															   																														руб
+														</div>
+														<div class='hall_name'>6</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25050' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25050' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>11:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    180 															   																    - 200															   																														руб
+														</div>
+														<div class='hall_name'>1</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25021' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25021' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>14:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>6</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25053' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25053' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>18:15</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>5</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25048' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25048' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>19:15</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>5</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25049' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25049' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>21:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    220 															   																    - 240															   																														руб
+														</div>
+														<div class='hall_name'>1</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25025' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25025' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>23:00</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Смурфики: Затерянная деревня </div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    140 															   																    - 160															   																														руб
+														</div>
+														<div class='hall_name'>3</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25032' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25032' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>10:30</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    160 															   																    - 180															   																														руб
+														</div>
+														<div class='hall_name'>2</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25026' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25026' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>11:30</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    200 															   																    - 220															   																														руб
+														</div>
+														<div class='hall_name'>3</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25033' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25033' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>12:30</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    220 															   																    - 240															   																														руб
+														</div>
+														<div class='hall_name'>2</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25027' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25027' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>13:30</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    240 															   																    - 260															   																														руб
+														</div>
+														<div class='hall_name'>2</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25028' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25028' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>15:30</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>2</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25029' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25029' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>17:30</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    260 															   																    - 280															   																														руб
+														</div>
+														<div class='hall_name'>2</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25030' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25030' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>19:30</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Босс-молокосос </div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    140 															   																    - 160															   																														руб
+														</div>
+														<div class='hall_name'>5</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25044' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25044' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>10:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    160 															   																    - 180															   																														руб
+														</div>
+														<div class='hall_name'>5</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25045' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25045' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>13:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    180 															   																    - 200															   																														руб
+														</div>
+														<div class='hall_name'>5</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25046' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25046' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>15:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    240 															   																    - 260															   																														руб
+														</div>
+														<div class='hall_name'>5</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25047' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25047' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>17:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    240 															   																    - 260															   																														руб
+														</div>
+														<div class='hall_name'>4</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25041' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25041' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>18:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    240 															   																    - 260															   																														руб
+														</div>
+														<div class='hall_name'>4</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25042' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25042' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>20:00</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Живое </div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    250 															   																    - 500															   																														руб
+														</div>
+														<div class='hall_name'>7 Комфорт</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25058' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25058' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>16:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    300 															   																    - 600															   																														руб
+														</div>
+														<div class='hall_name'>7 Комфорт</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25059' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25059' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>18:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    300 															   																    - 600															   																														руб
+														</div>
+														<div class='hall_name'>7 Комфорт</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25060' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25060' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>20:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    250 															   																    - 500															   																														руб
+														</div>
+														<div class='hall_name'>7 Комфорт</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25061' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25061' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>22:45</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Босс-молокосос  <span class="three-d">3D</span></div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    160 															   																    - 180															   																														руб
+														</div>
+														<div class='hall_name'>4</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25038' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25038' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>12:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    180 															   																    - 200															   																														руб
+														</div>
+														<div class='hall_name'>4</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25039' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25039' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>14:00</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    200 															   																    - 220															   																														руб
+														</div>
+														<div class='hall_name'>4</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25040' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25040' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>16:00</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Сплит </div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    120 															   																    - 140															   																														руб
+														</div>
+														<div class='hall_name'>1</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25022' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25022' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>16:15</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    120 															   																    - 140															   																														руб
+														</div>
+														<div class='hall_name'>1</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25024' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25024' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>20:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    120 															   																    - 140															   																														руб
+														</div>
+														<div class='hall_name'>4</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25043' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25043' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>22:15</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Везучий случай </div>
+
+																														<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    120 															   																    - 140															   																														руб
+														</div>
+														<div class='hall_name'>6</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25013' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25013' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>23:15</a>
+												
+											</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    120 															   																    - 140															   																														руб
+														</div>
+														<div class='hall_name'>6</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25055' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25055' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>23:15</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Красавица и чудовище </div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    150 															   																    - 300															   																														руб
+														</div>
+														<div class='hall_name'>7 Комфорт</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25056' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25056' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>11:45</a>
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    200 															   																    - 400															   																														руб
+														</div>
+														<div class='hall_name'>7 Комфорт</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25057' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25057' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>14:15</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+															<div class="schedule-table__row">
+									<div class="schedule-table__column schedule-table__column--first">Конг: Остров черепа </div>
+
+																														<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column ps">
+																																																			<a class="session-time seance" href="" onclick="return false;" data-placement="top" data-content="
+														<div class='cost'>
+																														   																    120 															   																    - 140															   																														руб
+														</div>
+														<div class='hall_name'>1</div>
+														<div class='link_seance'><a href='' data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25023' data-mode-type='1' data-count-sector='1'>бронировать</a></div>   <div class='link_seance'><a href=''  data-toggle='modal' data-target='#OTSscheduleModal' data-id-seance='25023' data-mode-type='2' data-count-sector='1'>купить</a></div> 														 " data-html="true"
+															>18:30</a>
+												
+											</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																																								<div class="schedule-table__column">&nbsp; &mdash; &nbsp;</div>
+																											</div>
+													</div>
+					</div>
+
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+			<section class="film-soon">
+			<h2 class="section__title section__title--schedule container">Скоро в кино:</h2>
+
+			<div class="owl-wrapper">
+				<ul  class="owl-carousel">
+
+
+					    <li class="film-card">
+        <a class="film-card__inner" href="/film/332/">
+            <span class="film-card__period film-card__period--soon">с 06   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/332.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">Время первых</span>
+				<span class="film-card__genre">приключения, триллер</span>
+				<span class="film-card__age">(Россия) 6+</span>
+			</span>
+        </a>
+            </li>
+    <li class="film-card">
+        <a class="film-card__inner" href="/film/333/">
+            <span class="film-card__period film-card__period--soon">с 06   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/333.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">Время первых 3D</span>
+				<span class="film-card__genre">приключения, триллер</span>
+				<span class="film-card__age">(Россия) 6+</span>
+			</span>
+        </a>
+            </li>
+    <li class="film-card">
+        <a class="film-card__inner" href="/film/334/">
+            <span class="film-card__period film-card__period--soon">с 06   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/334.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">Матрица времени</span>
+				<span class="film-card__genre">триллер, драма, детектив                </span>
+				<span class="film-card__age">(США) 16+</span>
+			</span>
+        </a>
+            </li>
+    <li class="film-card">
+        <a class="film-card__inner" href="/film/335/">
+            <span class="film-card__period film-card__period--soon">с 06   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/335.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">Уйти красиво</span>
+				<span class="film-card__genre">комедия, криминал</span>
+				<span class="film-card__age">(США) 18+</span>
+			</span>
+        </a>
+            </li>
+    <li class="film-card">
+        <a class="film-card__inner" href="/film/336/">
+            <span class="film-card__period film-card__period--soon">с 06   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/336.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">Танцы насмерть</span>
+				<span class="film-card__genre">фантастика                </span>
+				<span class="film-card__age">(Россия) 12+</span>
+			</span>
+        </a>
+            </li>
+    <li class="film-card">
+        <a class="film-card__inner" href="/film/337/">
+            <span class="film-card__period film-card__period--soon">с 06   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/337.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">БайБайМэн</span>
+				<span class="film-card__genre">ужасы, триллер                </span>
+				<span class="film-card__age">(США) 16+</span>
+			</span>
+        </a>
+            </li>
+    <li class="film-card">
+        <a class="film-card__inner" href="/film/338/">
+            <span class="film-card__period film-card__period--soon">с 13   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/338.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">Форсаж 8</span>
+				<span class="film-card__genre">боевик, триллер, криминал                </span>
+				<span class="film-card__age">(США,Великобритания,Франция,Канада,Самоа) 12+</span>
+			</span>
+        </a>
+            </li>
+    <li class="film-card">
+        <a class="film-card__inner" href="/film/339/">
+            <span class="film-card__period film-card__period--soon">с 13   Апреля</span>
+            <img class="film-card__img" src="http://89.189.2.130:48080/u/film/1/339.jpg" alt="">
+			<span class="film-card__info">
+				<span class="film-card__title">Форсаж 8 3D</span>
+				<span class="film-card__genre">боевик, триллер, криминал                </span>
+				<span class="film-card__age">(США,Великобритания,Франция,Канада,Самоа) 12+</span>
+			</span>
+        </a>
+            </li>
+
+
+				</ul>
+			</div>
+		</section>
+	
+	<section class="children-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="children-area__header">Детская зона</h2>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<a href="/children_area/" class="children-area__link col-xs-8 col-sm-4 col-sm-push-8 col-xs-push-2">Давайте играть</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="news">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="news__header">Акции и новости</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+									<div class="col-sm-6">
+						<div class="news-card">
+							<div class="news-card__img" style="background-image: url(/uploaded/news/63_sm.jpg);">
+
+							</div>
+							
+							<span class="news-card__date">19   Марта</span>
+							<div class="news-card__inner">
+								<div class="news-card__title">Фильмы ограниченные меморандумом</div>
+								<div class="news-card__short-text">Уважаемые зрители, на фильмы<br />"Красавица и Чудовище" до 30.03.17<br />"Сплит" до 30.03.17<br />"Логан" до 23.03.17<br />"Конг: остров черепа" до 23.03.17<br /><br /><br />скидки,акции и пригласительные не действительны<br /><br /><br /></div>
+								<a class="news-card__more" href="/news/63/">Подробнее</a>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-6">
+						<div class="news-card">
+							<div class="news-card__img" style="background-image: url(/uploaded/news/68_sm.jpg);">
+
+							</div>
+							
+							<span class="news-card__date">13   Марта</span>
+							<div class="news-card__inner">
+								<div class="news-card__title">Наша кухня </div>
+								<div class="news-card__short-text">В нашем <a href="http://www.arlekino52.ru/">кинотеатре " Арлекино"</a> вы можете не только хорошо отдохнуть,но и вкусно поесть!</div>
+								<a class="news-card__more" href="/news/68/">Подробнее</a>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-6">
+						<div class="news-card">
+							<div class="news-card__img" style="background-image: url(/uploaded/news/72_sm.jpg);">
+
+							</div>
+							
+							<span class="news-card__date">15   Октября</span>
+							<div class="news-card__inner">
+								<div class="news-card__title">Детская игровая зона</div>
+								<div class="news-card__short-text">Уважаемые гости нашего кинотеатра, у нас открылся развлекательный центр <a class="ui-pre-element-fix-tooltip" href="http://www.arlepark.ru" target="_blank">АРЛЕПАРК</a>, на территории которого работает детская зона для детей от 1 года до 7 лет !!</div>
+								<a class="news-card__more" href="/news/72/">Подробнее</a>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-6">
+						<div class="news-card">
+							<div class="news-card__img" style="background-image: url(/uploaded/news/64_sm.jpg);">
+
+							</div>
+							
+							<span class="news-card__date">20   Апреля</span>
+							<div class="news-card__inner">
+								<div class="news-card__title">КИНО-Среда </div>
+								<div class="news-card__short-text"><span>Дорогие друзья,&nbsp;<span>у нас акция - ХАЛЯВНАЯ СРЕДА!</span></span></div>
+								<a class="news-card__more" href="/news/64/">Подробнее</a>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-6">
+						<div class="news-card">
+							<div class="news-card__img" style="background-image: url(/uploaded/news/67_sm.jpg);">
+
+							</div>
+							
+							<span class="news-card__date">18   Апреля</span>
+							<div class="news-card__inner">
+								<div class="news-card__title">Сделай приятный подарок своим близким! </div>
+								<div class="news-card__short-text">У нас есть пригласительные!</div>
+								<a class="news-card__more" href="/news/67/">Подробнее</a>
+							</div>
+						</div>
+					</div>
+							</div>
+		</div>
+		<div class="news__layuot">
+		</div>
+	</section>
+
+</main>
+
+
+
+
+			<div class="container">
+				<div class="row">
+					<footer class="footer col-sm-12">
+						<img class="footer__img" src="/img/logo.svg" alt="logo">
+
+						<div class="copyright">ООО «Арлекино», 2016<br>Все права защищены.</div>
+
+						<a class="footer__onlinebees" href="http://onlinebees.ru"><span class="icon icon-bee"></span></a>
+
+						<ul class="footer__nav">
+							<li class="footer__nav-li">
+								<a class="footer__nav-link" href="/company/">О нас</a>
+							</li>
+							<li class="footer__nav-li">
+								<a class="footer__nav-link" href="/#schedule_id">Расписание</a>
+							</li>
+							<li class="footer__nav-li">
+								<a class="footer__nav-link" href="/children_area/">Детская зона</a>
+							</li>
+							<li class="footer__nav-li">
+								<a class="footer__nav-link" href="/gallery/">Галерея</a>
+							</li>
+							<li class="footer__nav-li">
+								<a class="footer__nav-link" href="/news/">Акции и новости</a>
+							</li>
+							<li class="footer__nav-li">
+								<a class="footer__nav-link" href="/contacts/">Контакты</a>
+							</li>
+						</ul>
+					</footer>
+				</div>
+			</div>
+		 
+
+		
+		<div class="modal fade" id="OTSscheduleModal" tabindex="-1" role="dialog" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="film_name"></h4>
+					</div>
+					<div class="modal-tabs tabs-1">
+						<div class="tab">выбор мест	<div class="arrow"></div></div>
+					</div>
+					<div class="modal-tabs tabs-2">
+						<div class="tab half">выбор мест <div class="arrow"></div></div>
+						<div class="tab half noactive">выбор способа оплаты <div class="arrow hide"></div></div>
+					</div>
+
+					<div id="hall_plan" class="user_reserve"></div>
+					<div class="modal-footer">
+
+
+						
+							<div class="login_info"></div>
+
+
+							<div id="login_reserve" > 
+								<button type="button" class="btn-default reserve" id="btn_reserve">Бронировать</button>
+								<div id="login_unreserve_area">
+									<div class="login_unreserve_info">Места забронированы, бронь снимается за 20 минут до начала фильма.</div>
+									<button type="button" class="btn-default unreserve" id="btn_unreserve">Отменить бронь</button>
+								</div>
+							</div>
+
+
+							<div id="login_enter"> 
+								<form class="form"  name="form_login_enter" action="" method="POST" id="form_login_enter" >
+									<div class="error"></div>
+									<center>
+										<div class="form-elems">
+																							<div class="form-group">
+													<label>E-mail</label>
+													<input class="form-control" name="email" type="text"  value="" class="reg" />
+												</div>
+																																	<div class="form-group">
+												<label>Пароль</label>
+												<input class="form-control" name="password" type="password" class="text" />
+											</div>
+											<button class="btn-default enter" type="submit">войти</button>
+										</div>
+									</center>
+									<a class="reg" href="#">Зарегистрироваться</a>
+									<a class="restore" href="#">Забыли пароль</a>
+									<a class="activate" href="">Код подтверждения регистрации</a>
+								</form>
+							</div>
+
+
+							<div id="login_reg"> 
+								<form class="form"  name="form_login_reg" action="" method="post" id="form_login_reg">
+									
+									<div class="error"></div>
+									<div class="form-elems form-mini">
+										<div class="form-group">
+											<label>ФИО <span>*</span></label>
+											<input class="form-control" name="name" type="text"  value="" class="reg" />
+										</div>
+																					<div class="form-group">
+												<label>E-mail <span>*</span></label>
+												<input class="form-control" name="email" type="text"  value="" class="reg" />
+											</div>
+																														<div class="form-group">
+											<label>Пароль <span>*</span></label>
+											<input class="form-control" name="reg_password" type="password" class="text" />
+										</div>
+										<div class="form-group">
+											<label>Телефон</label>
+											<input class="form-control" name="tel_contact" type="text"  value="" class="reg" />
+										</div>
+										<div class="form-group" id="reg_confirm_code_block">
+																							<div class="note">Для завершения регистрации введите код высланный на ваш E-mail</div>
+																																	<div class="form-group" >
+												<label>Код подтвержения</label>
+												<input class="form-control" name="reg_confirm_code" id="reg_confirm_code" type="text" class="text" />
+												<a href="#"  class="btn-default reg" id="btn_reg_confirm_code" data-reg-type-id="1">применить</a>
+											</div>
+										</div>
+										<button class="btn-default reg" type="submit">Зарегистрироваться</button>
+										<a class="cancel" href="#">Отмена</a>
+									</div>
+									<input type="hidden" name="hid_new_id_user" id="hid_new_id_user" value="" />
+									
+								</form>
+							</div>
+
+
+
+							<div id="login_restore"> 
+								<form class="form"  name="form_login_restore" action="" method="post" id="form_login_restore">
+									<div class="error"></div>
+									<div class="form-elems">
+																					<div class="note">Новый пароль будет выслан на ваш E-mail</div>
+											<div class="form-group">
+												<label>E-mail</label>
+												<input class="form-control" name="email" type="text"  value="" class="reg" />
+											</div>
+																														<button class="btn-default restore" type="submit">восстановить пароль</button>
+										<a class="cancel" href="#">Отмена</a>
+									</div>
+								</form>
+							</div>
+										
+							<div id="login_activate"> 
+							<form class="form"  name="form_login_activate" action="" method="post" id="form_login_activate">
+								<div class="error"></div>
+
+								<div class="form-elems">
+									<div class="note">Введите код активации высланный Вам на E-mail.</div>
+																			<div class="form-group">
+											<label>E-mail</label>
+											<input class="form-control" name="email" type="text"  value="" class="reg" />
+										</div>
+																											<div class="form-group">
+										<label>Код подтвержения</label>
+										<input class="form-control" name="activate_code" id="activate_code" type="text" class="text" style="width:106px;" />
+									</div>
+									<div class="form-group">
+										<a href="#" class="btn-default activate" id="btn_activate" data-reg-type-id="1">применить</a>
+									</div>
+									<a class="cancel" href="">Отмена</a>
+									<br /><br />
+								</div>
+							</form>
+							</div>
+								
+						
+
+					</div> 
+					<div class="onlinets">работает на <a href="https://onlinets.pro" target="_blank">www.onlinets.pro</a></div>
+				</div> 
+			</div>
+		</div>
+
+		<div id="popOverBox"></div>
+		<input type="hidden" name="hid_id_theatre" id="hid_id_theatre" value="1" />
+
+
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+				items:5,
+				loop:true,
+				// width:300,
+				// margin:auto,
+				nav:true,
+				// responsiveClass:true,
+				responsive:{
+					310:{
+						items:1,
+						// nav:true,
+						margin:10,
+						loop:true
+					},
+					780:{
+						items:2,
+						// nav:true,
+						margin:10,
+						loop:true
+					},
+					1070:{
+						items:3,
+						// nav:true,
+						margin:10,
+						loop:true
+					},
+					1400:{
+						items:4,
+						// nav:true,
+						margin:10,
+						loop:true
+					},
+					1680:{
+						items:5,
+						// nav:true,
+						margin:10,
+						loop:true
+					}
+
+				}
+			});
+		});
+	</script>
+	
+	<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-75830770-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	
+
+	</body>
+</html>
