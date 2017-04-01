@@ -50,13 +50,20 @@ public class ArlekinoSearch {
                 continue;
             }
 
-            List<String> sessions = new ArrayList<String>();
+            List<Session> sessions = new ArrayList<Session>();
             for (Element elTime : element.getElementsByClass("session-time seance")) {
-                sessions.add(elTime.text());
+                String price = getPrice(element).replaceAll(" ", "");
+                sessions.add(new Session(elTime.text(), price));
             }
             timeTable.fillDayWithSessions(sessions);
         }
 
         return new Movie(name, timeTable);
+    }
+
+    private String getPrice(final Element element) {
+        String prices = element.getElementsByClass("session-time seance").get(0).attr("data-content");
+        Document html = Jsoup.parse(prices);
+        return html.body().getElementsByClass("cost").text();
     }
 }

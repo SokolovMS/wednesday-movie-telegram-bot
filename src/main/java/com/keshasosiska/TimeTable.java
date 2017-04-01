@@ -11,7 +11,7 @@ public class TimeTable {
     private final List<DayOfWeek> dayOfWeekList;
 
     private int currentDayOfWeek;
-    private Multimap<DayOfWeek, String> sessions = HashMultimap.create();
+    private Multimap<DayOfWeek, Session> sessions = HashMultimap.create();
 
     public TimeTable(final List<DayOfWeek> dayOfWeekList) {
         checkArgument(dayOfWeekList != null);
@@ -21,12 +21,12 @@ public class TimeTable {
         this.currentDayOfWeek = 0;
     }
 
-    public void fillDayWithSessions(final List<String> sessions) {
+    public void fillDayWithSessions(final List<Session> sessions) {
         checkArgument(sessions != null);
         checkArgument(currentDayOfWeek < 7);
 
         DayOfWeek currentDay = dayOfWeekList.get(currentDayOfWeek);
-        for (String session : sessions) {
+        for (Session session : sessions) {
             this.sessions.put(currentDay, session);
         }
 
@@ -36,11 +36,12 @@ public class TimeTable {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
+
         for (DayOfWeek dayOfWeek : dayOfWeekList) {
             if (sessions.containsKey(dayOfWeek)) {
-                builder.append(dayOfWeek).append(":");
+                builder.append(dayOfWeek).append(": ");
             }
-            for (String session : sessions.get(dayOfWeek)) {
+            for (Session session : sessions.get(dayOfWeek)) {
                 builder.append(session).append(" ");
             }
         }
