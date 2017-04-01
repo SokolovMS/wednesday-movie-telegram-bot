@@ -7,6 +7,10 @@ import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class WednesdayMovieBot extends TelegramLongPollingBot {
     public static void main(String[] args) {
 
@@ -24,16 +28,34 @@ public class WednesdayMovieBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         // We check if the update has a message and the message has text
         if (update.hasMessage() && update.getMessage().hasText()) {
+            ArlekinoSearch arlekinoSearch = new ArlekinoSearch();
+            List<Movie> movies;
+            try {
+                movies = arlekinoSearch.getFilms();
+            } catch (IOException e) {
+                e.printStackTrace();
+                movies = new ArrayList<Movie>();
+            }
+            String moviesString = generateMessage(movies);
+
             SendMessage message = new SendMessage() // Create a SendMessage object with mandatory fields
                     .setChatId(update.getMessage().getChatId())
-                    .setText(update.getMessage().getText());
+                    .enableHtml(true)
+                    .setText(moviesString);
             try {
                 sendMessage(message); // Call method to send the message
             } catch (TelegramApiException e) {
                 e.printStackTrace();
             }
         }
+    }
 
+    private String generateMessage(final List<Movie> movies) {
+        StringBuilder builder = new StringBuilder();
+        for (Movie movie : movies) {
+            builder.append(movie.toString());
+        }
+        return builder.toString();
     }
 
     public String getBotUsername() {
