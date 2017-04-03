@@ -1,5 +1,10 @@
-package com.keshasosiska;
+package com.keshasosiska.cinema.arlekino;
 
+import com.keshasosiska.DayOfWeek;
+import com.keshasosiska.Movie;
+import com.keshasosiska.Session;
+import com.keshasosiska.TimeTable;
+import com.keshasosiska.cinema.Cinema;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -9,23 +14,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArlekinoSearch {
-    public List<Movie> getFilms() throws IOException {
-        Document doc = Jsoup.connect("http://arlekino52.ru/#schedule_id").get();
-        return getMovies(doc);
-    }
-
-    private List<DayOfWeek> getWeekDays(final Document doc) {
-        Elements elWeekDays = doc.body().select("#schedule_id")
-                .select(".schedule-table__day");
-        List<DayOfWeek> weekDays = new ArrayList<DayOfWeek>();
-        for (Element element : elWeekDays) {
-            weekDays.add(DayOfWeek.from(element.text()));
+public class ArlekinoCinema implements Cinema {
+    public List<Movie> getMovies() {
+        Document doc;
+        try {
+            doc = Jsoup.connect("http://arlekino52.ru/#schedule_id").get();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ArrayList<Movie>();
         }
-        return weekDays;
+
+        return getMoviesFromSite(doc);
     }
 
-    private List<Movie> getMovies(final Document doc) {
+    private List<Movie> getMoviesFromSite(final Document doc) {
         Elements elMovies = doc.body().select("#schedule_id")
                 .select(".schedule-table__row");
 
@@ -39,6 +41,16 @@ public class ArlekinoSearch {
             movies.add(getMovie(elMovie, dayOfWeeks));
         }
         return movies;
+    }
+
+    private List<DayOfWeek> getWeekDays(final Document doc) {
+        Elements elWeekDays = doc.body().select("#schedule_id")
+                .select(".schedule-table__day");
+        List<DayOfWeek> weekDays = new ArrayList<DayOfWeek>();
+        for (Element element : elWeekDays) {
+            weekDays.add(DayOfWeek.from(element.text()));
+        }
+        return weekDays;
     }
 
     private Movie getMovie(final Element elMovie, final List<DayOfWeek> dayOfWeeks) {

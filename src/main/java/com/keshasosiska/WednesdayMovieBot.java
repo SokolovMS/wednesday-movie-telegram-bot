@@ -1,5 +1,8 @@
 package com.keshasosiska;
 
+import com.keshasosiska.cinema.Cinema;
+import com.keshasosiska.cinema.arlekino.ArlekinoCinema;
+import com.keshasosiska.kinopoisk.KinopoiskSearch;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
@@ -7,8 +10,6 @@ import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class WednesdayMovieBot extends TelegramLongPollingBot {
@@ -28,14 +29,12 @@ public class WednesdayMovieBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         // We check if the update has a message and the message has text
         if (update.hasMessage() && update.getMessage().hasText()) {
-            ArlekinoSearch arlekinoSearch = new ArlekinoSearch();
-            List<Movie> movies;
-            try {
-                movies = arlekinoSearch.getFilms();
-            } catch (IOException e) {
-                e.printStackTrace();
-                movies = new ArrayList<Movie>();
+            Cinema arlekinoCinema = new ArlekinoCinema();
+            List<Movie> movies = arlekinoCinema.getMovies();
+            for (Movie movie : movies) {
+                movie.setKinopoiskEntry(KinopoiskSearch.findMovie(movie.getName()));
             }
+
             String moviesString = generateMessage(movies);
 
             SendMessage message = new SendMessage() // Create a SendMessage object with mandatory fields
